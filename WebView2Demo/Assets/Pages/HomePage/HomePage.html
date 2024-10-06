@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView2 Bridge Pattern Demo</title>
+    <script>
+        function sendDataToCSharp() {
+            // 通過 WebView2 與 C# 進行數據交互
+            window.chrome.webview.postMessage("Hello from JavaScript!");
+        }
+        function selectFile() {
+            let message = {
+                action: "SelectFile"
+            }
+            window.chrome.webview.postMessage(message)
+        }
+
+        function receiveDataFromCSharp(data) {
+            alert('Received data from C#: ' + data);
+        }
+    </script>
+</head>
+<body>
+    <h1>WebView2 Bridge Pattern Demo</h1>
+    <button onclick="sendDataToCSharp()">Send Data to C#</button>
+    <button onclick="selectFile()">Select File</button>
+</body>
+</html>

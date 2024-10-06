@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Vertical Navigation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh; /* 設置整個畫面的高度 */
+            overflow: hidden; /* 隱藏不必要的滾動條 */
+        }
+        /* 導覽列 */
+        nav {
+            background-color: #333;
+            width: 180px; /* 設置導覽列的固定寬度 */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 導覽列內容從上方開始 */
+            height: 100vh; /* 導覽列佔滿整個畫面高度 */
+            overflow: hidden; /* 防止多餘滾動條 */
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+
+                nav ul li {
+                    width: 100%;
+                }
+
+                    nav ul li a {
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        padding: 20px;
+                        text-decoration: none;
+                        width: 100%;
+                    }
+
+                        nav ul li a:hover {
+                            background-color: #575757;
+                        }
+    </style>
+    <script>
+        window.onload = function () {
+			let message = {
+				action: 'UpdateNavigatorItems',
+			};
+
+            window.chrome.webview.postMessage(message);
+        }
+
+        // 動態生成導航
+		function generateNavigation( navigatorItems ) {
+            const navContainer = document.getElementById('nav');
+
+			// 清空 navContainer 內的所有元素
+			navContainer.innerHTML = '';
+
+			const ulElement = document.createElement('ul');
+
+			// 使用從 C# 傳來的 navigatorItems
+			navigatorItems.forEach(item => {
+				const liElement = document.createElement('li');
+				const aElement = document.createElement('a');
+				aElement.textContent = item.Name;
+
+				aElement.onclick = function () {
+                    // 點擊導航項目時，將 URL 發送到 C#
+                    let message = {
+                        action: 'Navigate',
+                        data: item,
+                    };
+
+					window.chrome.webview.postMessage(message);
+				};
+
+				// 將生成的 a 標籤附加到 li，再附加到 ul
+				liElement.appendChild(aElement);
+				ulElement.appendChild(liElement);
+			});
+
+			// 最後將生成的 ul 附加到 nav
+            navContainer.appendChild(ulElement);
+		};
+    </script>
+</head>
+<body>
+    <button />
+    <!-- 全螢幕高度的垂直導覽列 -->
+    <nav id="nav">
+        <!-- 導航項目會被動態生成 -->
+    </nav>
+
+</body>
+</html>

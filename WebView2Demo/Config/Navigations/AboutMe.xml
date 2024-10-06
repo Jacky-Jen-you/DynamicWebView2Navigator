@@ -1,0 +1,8 @@
+﻿<NavigationItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Name>AboutMe</Name>
+	<Url>Assets/Pages/AboutMe/AboutMe.html</Url>
+	<WebBridgeFullName>WebView2Demo.WebBridges.Pages.AboutMeWebBridge</WebBridgeFullName>
+	<DLLName></DLLName>
+	<Label>About Me</Label>
+	<LabelResourceKey>Page_AboutMe_Label</LabelResourceKey>
+</NavigationItem>

@@ -1,0 +1,8 @@
+﻿<NavigationItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Name>HomePage</Name>
+	<Url>Assets/Pages/HomePage/HomePage.html</Url>
+	<WebBridgeFullName>WebView2Demo.WebBridges.Pages.HomePageWebBridge</WebBridgeFullName>
+	<DLLName></DLLName>
+	<Label>Home Page</Label>
+	<LabelResourceKey>Page_HomePage_Label</LabelResourceKey>
+</NavigationItem>
