@@ -26,25 +26,25 @@ DynamicWebView2Navigator is a dynamic web navigation application built using Web
 
 ```
 WebView2Demo/
- ¢x
-¢u¢w¢w Config/
-¢x   ¢|¢w¢w Navigations/              # Contains the configuration files for navigation items
-¢x
-¢u¢w¢w WebBridges/                   # Contains the WebBridge classes for frontend-backend communication
-¢x   ¢u¢w¢w Pages/                    # All custom WebBridge implementations
-¢x   ¢|¢w¢w WebBridgeBase.cs          # Base class for all WebBridge implementations
-¢x
-¢u¢w¢w Assets/                       # Assets for the project, including custom views and resources
-¢x   ¢|¢w¢w Pages/                    # Each page has its own folder for related resources (HTML, JS, CSS)
-¢x       ¢u¢w¢w Page1/                # Folder for page "Page1"
-¢x       ¢x   ¢u¢w¢w index.html        # HTML file for Page1
-¢x       ¢x   ¢u¢w¢w script.js         # JavaScript file for Page1
-¢x       ¢x   ¢|¢w¢w styles.css        # CSS file for Page1
-¢x       ¢u¢w¢w Page2/                # Folder for page "Page2"
-¢x       ¢x   ¢u¢w¢w index.html        # HTML file for Page2
-¢x       ¢x   ¢u¢w¢w script.js         # JavaScript file for Page2
-¢x       ¢x   ¢|¢w¢w styles.css        # CSS file for Page2
-¢x       ¢|¢w¢w ...                   # More pages as needed
+ ï¿½x
+ï¿½uï¿½wï¿½w Config/
+ï¿½x   ï¿½|ï¿½wï¿½w Navigations/              # Contains the configuration files for navigation items
+ï¿½x
+ï¿½uï¿½wï¿½w WebBridges/                   # Contains the WebBridge classes for frontend-backend communication
+ï¿½x   ï¿½uï¿½wï¿½w Pages/                    # All custom WebBridge implementations
+ï¿½x   ï¿½|ï¿½wï¿½w WebBridgeBase.cs          # Base class for all WebBridge implementations
+ï¿½x
+ï¿½uï¿½wï¿½w Assets/                       # Assets for the project, including custom views and resources
+ï¿½x   ï¿½|ï¿½wï¿½w Pages/                    # Each page has its own folder for related resources (HTML, JS, CSS)
+ï¿½x       ï¿½uï¿½wï¿½w Page1/                # Folder for page "Page1"
+ï¿½x       ï¿½x   ï¿½uï¿½wï¿½w index.html        # HTML file for Page1
+ï¿½x       ï¿½x   ï¿½uï¿½wï¿½w script.js         # JavaScript file for Page1
+ï¿½x       ï¿½x   ï¿½|ï¿½wï¿½w styles.css        # CSS file for Page1
+ï¿½x       ï¿½uï¿½wï¿½w Page2/                # Folder for page "Page2"
+ï¿½x       ï¿½x   ï¿½uï¿½wï¿½w index.html        # HTML file for Page2
+ï¿½x       ï¿½x   ï¿½uï¿½wï¿½w script.js         # JavaScript file for Page2
+ï¿½x       ï¿½x   ï¿½|ï¿½wï¿½w styles.css        # CSS file for Page2
+ï¿½x       ï¿½|ï¿½wï¿½w ...                   # More pages as needed
 ```
 
 ## How to Add a New Page
@@ -64,4 +64,4 @@ WebView2Demo/
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```¡C
+```ï¿½C
